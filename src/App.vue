@@ -18,11 +18,15 @@ export default {
 </script>
 
 <template>
-    <AppHeader />
-    <AppMain />
-    <AppFooter />
+  <AppHeader />
+  <AppMain />
+  <AppFooter />
 </template>
 
 <style lang="scss">
-  @use "./styles/main.scss";
+@use "./styles/main.scss";
+
+body {
+  background-color: #2e3a46;
+}
 </style>
