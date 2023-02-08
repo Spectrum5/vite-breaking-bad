@@ -1,17 +1,31 @@
 <script>
-import AppHeader from "./components/AppHeader.vue"
-import AppMain from "./components/AppMain.vue"
-import AppFooter from "./components/AppFooter.vue"
-
+import axios from 'axios';
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
+import AppSingleCard from './components/AppSingleCard.vue';
+import { store } from './store.js';
 export default {
   components: {
     AppHeader,
     AppMain,
-    AppFooter,
+    AppSingleCard,
   },
-
   data() {
     return {
+      store
+    }
+  },
+  created() {
+    this.getCards();
+  },
+  methods: {
+    getCards() {
+      axios.get(store.url).then((response) => {
+        store.cards = response.data.data
+        setTimeout(() => {
+          store.loading = false
+        }, 100)
+      })
     }
   }
 }
@@ -20,10 +34,11 @@ export default {
 <template>
   <AppHeader />
   <AppMain />
-  <AppFooter />
+  <AppSingleCard />
+
 </template>
 
-<style lang="scss">
+<style lang="scss" >
 @use "./styles/main.scss";
 
 body {

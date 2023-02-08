@@ -26,7 +26,7 @@ export default {
 
     div {
         img {
-            width: 100px;
+            width: 200px;
         }
     }
 }
