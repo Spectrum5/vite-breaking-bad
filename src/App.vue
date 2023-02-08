@@ -2,12 +2,14 @@
 import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+import Apploader from './components/AppLoader.vue';
 import { store } from './store.js';
 
 export default {
   components: {
     AppHeader,
     AppMain,
+    Apploader,
   },
   data() {
     return {
@@ -18,12 +20,12 @@ export default {
     this.getCards();
   },
   methods: {
-    async getCards() {
-      await axios.get(store.url).then((response) => {
+    getCards() {
+      axios.get(store.url).then((response) => {
         store.cards = response.data.data
         setTimeout(() => {
-          store.loading = false
-        }, 100)
+          store.loading = true
+        }, 3000)
       })
     }
   }
@@ -32,7 +34,12 @@ export default {
 
 <template>
   <AppHeader />
-  <AppMain />
+  <div v-if="store.loading">
+    <AppMain />
+  </div>
+  <div v-else>
+    <Apploader />
+  </div>
 </template>
 
 <style lang="scss" >

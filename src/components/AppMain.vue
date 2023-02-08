@@ -31,7 +31,7 @@ export default {
 <style lang="scss" >
 /* aggiunta stile css */
 main {
-    background-color: #d48f38;
+    background-color: #ef482f;
     width: 100%;
 
     .select {
