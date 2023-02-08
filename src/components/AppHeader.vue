@@ -14,7 +14,7 @@ export default {
             <div class="p-2">
                 <img src="../assets/yougioh.png" alt="Yu-Gi-Oh!">
             </div>
-            <div class="p-2">
+            <div class="p-3">
                 <h1>Yu-Gi-Oh! Api</h1>
             </div>
         </section>
@@ -27,6 +27,9 @@ export default {
     div {
         img {
             width: 200px;
+        }
+        h1 {
+            color: red;
         }
     }
 }

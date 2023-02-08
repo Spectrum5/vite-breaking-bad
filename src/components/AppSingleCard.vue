@@ -23,7 +23,7 @@ export default {
 .card {
     width: calc(100% / 5 - 20px);
     margin: 10px;
-    background-color: #ef482f;
+    background-color: red;
     border-radius: 25px;
     .card-img {
         img {

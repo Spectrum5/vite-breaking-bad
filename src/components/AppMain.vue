@@ -1,24 +1,18 @@
 <script>
 import AppCardList from './AppCardList.vue';
+import AppResultsMessage from './AppResultsMessage.vue';
 export default {
     components: {
-        AppCardList
+        AppCardList,
+        AppResultsMessage,
     }
 }
 </script>
-
 <template>
-    <!-- creazione template html -->
     <main>
-        <div class="select">
-            <select name="Alien" id="selettore">
-                <option value="1">Alien</option>
-                <option value="2">Alien</option>
-                <option value="3">Alien</option>
-            </select>
-        </div>
-        <div class="container">
 
+        <div class="container">
+            <AppResultsMessage />
             <AppCardList />
 
         </div>
@@ -28,22 +22,18 @@ export default {
 </template>
 
 
-<style lang="scss" >
-/* aggiunta stile css */
+<style lang="scss" scoped >
 main {
-    background-color: #ef482f;
+    background-color: #2e3a46;
     width: 100%;
-
     .select {
         width: 80%;
         margin: 0 auto;
         padding: 20px 0;
     }
-
     .container {
-        padding-top: 30px;
         background-color: white;
-
+        padding-top: 20px;
         .select {
             padding: 20px;
             width: 200px;
