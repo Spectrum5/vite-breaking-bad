@@ -6,12 +6,12 @@ export default {
 }
 </script>
 <template>
-    <div class="card">
+    <div class="card rounded-5 m-2">
         <div class="card-img">
-            <img :src="card.card_images[0].image_url" />
+            <img class="w-100" :src="card.card_images[0].image_url" />
         </div>
-        <div class="card-info">
-            <h4>{{ card.name }}</h4>
+        <div class="card-info text-white">
+            <h5 class="text-black pb-2">{{ card.name }}</h5>
             <p>{{ card.type }}</p>
         </div>
     </div>
@@ -22,21 +22,10 @@ export default {
 <style lang="scss" scoped>
 .card {
     width: calc(100% / 5 - 20px);
-    margin: 10px;
     background-color: red;
-    border-radius: 25px;
-    .card-img {
-        img {
-            width: 100%;
-        }
-    }
+
     .card-info {
-        color: white;
         padding: 20px 0 20px 5px;
-        h4 {
-            color: black;
-            padding-bottom: 5px;
-        }
     }
 }
 </style>

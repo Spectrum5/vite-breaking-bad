@@ -8,10 +8,11 @@ export default {
     }
 }
 </script>
-<template>
-    <main>
 
-        <div class="container">
+<template>
+    <main class="w-100">
+
+        <div class="container pt-3 bg-white">
             <AppResultsMessage />
             <AppCardList />
 
@@ -25,19 +26,5 @@ export default {
 <style lang="scss" scoped >
 main {
     background-color: #2e3a46;
-    width: 100%;
-    .select {
-        width: 80%;
-        margin: 0 auto;
-        padding: 20px 0;
-    }
-    .container {
-        background-color: white;
-        padding-top: 20px;
-        .select {
-            padding: 20px;
-            width: 200px;
-        }
-    }
 }
 </style>

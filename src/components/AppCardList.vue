@@ -13,8 +13,8 @@ export default {
 }
 </script>
 <template>
-    <div class="container">
-        <div class="card-cont">
+    <div class="container mt-3">
+        <div class="card-cont d-flex flex-wrap">
             <AppSingleCard v-for="(item, index) in store.cards" :key="index" :card="item" />
 
         </div>
@@ -25,12 +25,5 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-main {
-    background-color: white;
-    margin-top: 3rem;
-    .card-cont {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
+
 </style>

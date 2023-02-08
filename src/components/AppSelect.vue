@@ -20,7 +20,7 @@ export default {
 </script>
 <template lang="">
     <div class="bg-blue">
-        <div class="select-container">
+        <div class="select-container text-center p-3 w-75">
             <select v-model="store.selectedArc" @change="$emit('select')" name="arc" id="arc">
                 <option v-for="(item, index) in archetypes" :key="item" :value="item">{{ item }}</option>
             </select>
@@ -32,10 +32,7 @@ export default {
 .bg-blue {
     background-color: #2e3a46;
     .select-container {
-        padding: 30px 0;
-        width: 80%;
         margin: 0 auto;
-        text-align: center;
     }
 }
 </style>
